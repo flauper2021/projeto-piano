@@ -20,8 +20,7 @@ body {
     color: #b2b2b2;
     display:flex;
     align-items: center;
-    justify-content: space-between;
-    font-family: 'poppins', sans-serif;
+    justify-content: space-between;    
 }
 
 header h2 {
@@ -68,10 +67,55 @@ header .column span {
 
 .keys-check input:checked::before {
     left: 2.1rem;
-    background-color:  #8c8c8c;
+    background-color:  #ffff;
 }
 
 .piano-keys {
     display:flex;
     margin-top: 40px;
+}
+
+.piano-keys .keys {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    color: #a2a2a2;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.piano-keys .white {
+    border: 1px solid rgb(233, 22, 22);
+    width: 70px;
+    height: 230px;
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border-radius: 8px;
+}
+
+.piano-keys .black {
+    border: 1px solid orange;
+    width: 44px; 
+    height: 140px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+    background: linear-gradient(#333, #000);
+    border-radius: 0 0 5px 5px;
+}
+
+.keys span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
+}
+
+.piano-keys .white:active {
+    box-shadow: insert -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #fff 0%, #cec5c5 100%);
+}
+
+.piano-keys .black:active {
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom, #000 0%, #434343 100%);
 }
